@@ -1,8 +1,8 @@
-{
-  "luck":{
+[
+  "luck":[
     "p":10000
-  },
-  "BETA TESTER":{
+  ],
+  "BETA TESTER":[
     "p":3500
-  }
-}
+  ]
+]
