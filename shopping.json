@@ -2,11 +2,13 @@
     "SHOP":[
         {
             "p":10000,
-            "n":"LUCK"
+            "n":"LUCK",
+            "e":":four_leaf_clover:"
         },
         {
             "p":3500,
-            "n":"BETA"
+            "n":"BETA",
+            "e":":dark_sunglasses:"
         }
     ]
 }
