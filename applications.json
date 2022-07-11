@@ -1,7 +1,14 @@
 {
-  "JDownloader":[
-    "Version":0.5,
-    "Description":"Download vídeos/Musics from YouTube!",
-    "Download":""
+  "apps":[
+    {
+      "version":0.5,
+      "name": "JDownloader",
+      "download":""
+    },
+    {
+      "version":0.1.
+      "name":"DBJL",
+      "download":""
+    }
   ]
 }
