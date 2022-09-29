@@ -1,5 +1,6 @@
 [
   "bot":{
+    "name":"bot",
     "image":"https://raw.githubusercontent.com/JpGamesBR/database/main/images/bot.png"
   }
 ]
