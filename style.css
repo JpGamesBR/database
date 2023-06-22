@@ -22,7 +22,7 @@ body {
 }
 
 /* Container styles */
-.container {
+.conatiner {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
@@ -41,22 +41,22 @@ body {
 }
 
 /* Navigation styles */
-.navbar {
-  background-color: #333;
+.nav {
+  background-color: #5865f2;
   padding: 10px;
 }
 
-.navbar ul {
+.nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
 }
 
-.navbar li {
+.nav li {
   margin: 0 10px;
 }
 
-.navbar a {
+.nav a {
   color: #fff;
   text-decoration: none;
 }
@@ -68,7 +68,10 @@ body {
 
 .content h2 {
   font-size: 24px;
+  margin: 5%;
   margin-bottom: 20px;
+  color: white;
+  background-color: #2b2f31;
 }
 
 /* Footer styles */
@@ -77,4 +80,13 @@ body {
   padding: 10px;
   background-color: #333;
   color: #fff;
+}
+
+body {
+  background-color: #23272a;
+}
+
+hr{
+  background-color: #00b0f4;
+  border-color:#00b0f4;
 }
