@@ -17,7 +17,7 @@ li {
 /* Set the background and text colors */
 body {
   background-color: #f0f0f0;
-  color: #333;
+  color: #23272a;
   font-family: Arial, sans-serif;
 }
 
@@ -46,9 +46,9 @@ body {
   padding: 10px;
 }
 
-.nav ul {
+.nav ol {
   list-style: none;
-  display: flex;
+  display: inline-block;
   justify-content: center;
 }
 
@@ -64,6 +64,8 @@ body {
 /* Content styles */
 .content {
   margin-bottom: 40px;
+  background-color: #2b2f31;
+  color: white;
 }
 
 .content h2 {
@@ -71,14 +73,13 @@ body {
   margin: 5%;
   margin-bottom: 20px;
   color: white;
-  background-color: #2b2f31;
 }
 
 /* Footer styles */
 .footer {
   text-align: center;
   padding: 10px;
-  background-color: #333;
+  background-color: #5865f2;
   color: #fff;
 }
 
