@@ -1,7 +1,8 @@
 var dataJSON = {
     "free":[
         {"style.css":"/data/style.css"},
-        {"memes-pt-br.json":"/data/memes-pt-br.json"}
+        {"memes-pt-br.json":"/data/memes-pt-br.json"},
+        {"scripts.js":"/data/scripts.js"}
     ]
 }
 
