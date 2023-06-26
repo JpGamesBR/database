@@ -10,7 +10,7 @@
             <ol class="nav">
                 <li><h1 href="/">Database - MrJuaumBR</h1></li>
                 <li><a href="#w">What is this</a></li>
-                <li><a href="h">How this site work</a></li>
+                <li><a href="#h">How this site work</a></li>
                 <li><a href="#i">I can use any item</a></li>
                 <li><a href="#c">Contacts</a></li>
             </ol>
@@ -22,6 +22,14 @@
         <br>
         <div class="content">
             <hr>
+            <h3>If you only want to see the code, click <a href=""#scbtn>here</a>.</h3>
+            <button onclick="showOrHide('logs')">Show Logs</button>
+            <div id="logs">
+                <h1>Logs:</h1>
+                <div id="logs_list" style="background-color: black; color: green;">
+                    ...
+                </div>
+            </div>
             <div id="w">
                 <h1>What is this site?</h1>
                 <small>Awnser:</small>
@@ -52,8 +60,8 @@
             <div id="i">
                 <h1>I can use content from this site?</h1>
                 <small>Awnser:</small>
-                <h4>Yes, you can.<br>All content from this site is free to use, don't need any copyright or credits.<br>This is a database developed for better implement in projects.</h4>
-                <button onclick="showOrHide()">Content</button>
+                <h4>Yes, you can.<br>All content from this site is free to use, don't need any copyright or credits.<br>This is a database developed for better implement in projects.<br>You can see a list of all items this site store here:</h4>
+                <button id="scbtn" onclick="showOrHide('cnt')">Show Content</button>
             </div>
             <div id="cnt" hidden>
                 <h1>Something goes wrong...</h1>
