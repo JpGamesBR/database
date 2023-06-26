@@ -35,11 +35,13 @@ function getFiles(){
     d.appendChild(e);
 }
 
-function showOrHide(){
-    var d = document.getElementById("cnt");
+function showOrHide(id){
+    var d = document.getElementById(id);
     if (d.hidden){
         d.hidden = false;
-        getFiles();
+        if (id == "cnt"){
+            getFiles();   
+        };
     }
     else{
         d.hidden = true;
