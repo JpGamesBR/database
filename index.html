@@ -62,10 +62,34 @@
                 <h1>I can use content from this site?</h1>
                 <small>Awnser:</small>
                 <h4>Yes, you can.<br>All content from this site is free to use, don't need any copyright or credits.<br>This is a database developed for better implement in projects.<br>You can see a list of all items this site store here:</h4>
-                <button id="scbtn" onclick="showOrHide('cnt')">Show Content</button>
+                <button id="scbtn" onclick="OverlayOpen('cnt')">Show Content</button>
             </div>
-            <div id="cnt" hidden>
-                <h1>Something goes wrong...</h1>
+            <div id="cnt" class="overlay" style="display: none;">
+                <div class="menu">
+                    <div class="menu-head">
+                        <div class="mcontent">
+                            <small>Content:</small>
+                            <button onclick="OverlayOpen('cnt')">Close</button>
+                        </div>
+                    </div>
+                    <p>Click in one to select.</p>
+                    <div style="display: inline; width: 70%;">
+                        <ul id="cnt_list" class="console c-green">
+                        </ul>
+                    </div>
+                    <div style="display: inline; width: 30%;">
+                        <ul>
+                            <li>
+                                <div id="item-info" style="background-color: gray;" hidden>
+                                    Info:
+                                    <small id="item-id">Id: </small><br>
+                                    <span id="item-title">Title: </span><br>
+                                    <span>Link: <a id="item-link"><button>Go</button></a></span><br>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <hr>
             <div id="c">
