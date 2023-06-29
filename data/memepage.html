@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+t<!DOCTYPE html>
 <html>
   <head>
     <title>MEME PAGE VIEW</title>
@@ -9,8 +9,7 @@
     <script>
       function meme(){
         var i= document.getElementById("mm");
-        var j=require("./memes-pr-br.json");
-        console.log(j);
+        var j=fetch('./memepage.html').then((response)=>response.json()).then((json) => console.log(json));
       }
     </script>
   </body>
