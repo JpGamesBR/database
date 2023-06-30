@@ -6,6 +6,7 @@ var dataJSON = {
         {"Ez Cheat.js":"/data/ezCheat.js"}
     ],
     "logs":[
+        {"date":"30/06/23 14:27","text":"some improvments to CSS and site title."},
         {"date":"29/06/23 15:00","text":"Some improvements in JavaScript and CSS and new function to Show Content button."},
         {"date":"26/06/23 21:25","text":"Some improvements in JavaScript and CSS and a new 'go to top' button"},
         {"date":"26/06/23 21:08","text":"Added log System Logic, and functionalities"},
