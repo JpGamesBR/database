@@ -6,6 +6,7 @@ var dataJSON = {
         {"Ez Cheat.js":"/data/ezCheat.js"}
     ],
     "logs":[
+        {"date":'01/06/23 09:17','text':"memes page and new memes."},
         {"date":"30/06/23 14:27","text":"some improvments to CSS and site title."},
         {"date":"29/06/23 15:00","text":"Some improvements in JavaScript and CSS and new function to Show Content button."},
         {"date":"26/06/23 21:25","text":"Some improvements in JavaScript and CSS and a new 'go to top' button"},
@@ -15,7 +16,12 @@ var dataJSON = {
 }
 
 function GetMemes(){
-    fetch("./data/memes-pt-br.json").then(response => {return response.json();}).then(data => console.log(data));
+    var memesJson;
+    var meme = "";
+    fetch("./data/memes-pt-br.json").then(response => {return response.json();}).then(data => memesJson);
+    meme = memesJson[Math.floor(Math.random()*memesJson.length)];
+    var img = document.getElementById("meme-img");
+    img.src=meme;
 }
 
 function GetClickedSpan(me){
@@ -136,6 +142,9 @@ function OverlayOpen(id){
         d.style.display = "block";
         if (id=="cnt"){
             getFiles();
+        }
+        else if(id =="meme"){
+            GetMemes();
         }
     }
     else{
