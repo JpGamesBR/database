@@ -19,6 +19,7 @@ function GetMemes(){
     var memesJson;
     var meme = "";
     fetch("./data/memes-pt-br.json").then(response => {return response.json();}).then(data => memesJson);
+    return memesJson;
     meme = memesJson[Math.floor(Math.random()*memesJson.length)];
     var img = document.getElementById("meme-img");
     img.src=meme;
