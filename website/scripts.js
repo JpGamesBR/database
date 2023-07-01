@@ -3,7 +3,8 @@ var dataJSON = {
         {"style.css":"/data/style.css"},
         {"memes-pt-br.json":"/data/memes-pt-br.json"},
         {"scripts.js":"/data/scripts.js"},
-        {"Ez Cheat.js":"/data/ezCheat.js"}
+        {"Ez Cheat.js":"/data/ezCheat.js"},
+        {"PyGame PooP Engine 2":"/data/PooPEngine2.py"}
     ],
     "logs":[
         {"date":'01/06/23 09:17','text':"memes page and new memes."},
@@ -21,7 +22,6 @@ function GetMemes(){
     fetch("./data/memes-pt-br.json").then(response => {return response.json()}).then((data) => {
         memesJson = data;
         meme = memesJson[Math.floor(Math.random()*memesJson.length)];
-        console.log(meme,Math.floor(Math.random()*memesJson.length));
         var img = document.getElementById("meme-img");
         img.src=meme;    
     });
