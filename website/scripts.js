@@ -16,13 +16,15 @@ var dataJSON = {
 }
 
 function GetMemes(){
-    var memesJson;
     var meme = "";
-    fetch("./data/memes-pt-br.json").then(response => {return response.json();}).then(data => memesJson);
-    return memesJson;
-    meme = memesJson[Math.floor(Math.random()*memesJson.length)];
-    var img = document.getElementById("meme-img");
-    img.src=meme;
+    var memesJson;
+    fetch("./data/memes-pt-br.json").then(response => {return response.json()}).then((data) => {
+        memesJson = data;
+        meme = memesJson[Math.floor(Math.random()*memesJson.length)];
+        console.log(meme,Math.floor(Math.random()*memesJson.length));
+        var img = document.getElementById("meme-img");
+        img.src=meme;    
+    });
 }
 
 function GetClickedSpan(me){
