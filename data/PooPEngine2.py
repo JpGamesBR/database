@@ -140,6 +140,17 @@ class PooPEngine2():
             pyg.time.delay(150)
         return curState
 
+    def hex_to_rgb(self,hex):
+        rgb = []
+        for i in (0, 2, 4):
+            decimal = int(hex[i:i+2], 16)
+            rgb.append(decimal)
+        
+        return tuple(rgb)
+    
+    def rgb_to_hex(self,r, g, b):
+        return '#{:02x}{:02x}{:02x}'.format(r, g, b)
+
     def events(self):
         return pyg.event.get()
 
