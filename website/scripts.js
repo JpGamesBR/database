@@ -4,7 +4,8 @@ var dataJSON = {
         {"name":"memes-pt-br.json","path":"/data/memes-pt-br.json","type":"json","desc":"A Json for store image links"},
         {"name":"scripts.js","path":"/data/scripts.js","type":"js","desc":"A script for sites"},
         {"name":"Ez Cheat.js","path":"/data/ezCheat.js","type":"js","desc":"A cheat for a specific site"},
-        {"name":"PyGame PooP Engine 2","path":"/data/PooPEngine2.py","type":"py","desc":"A engine with PyGame"}
+        {"name":"PyGame PooP Engine 2","path":"/data/PooPEngine2.py","type":"py","desc":"A engine with PyGame"},
+        {"name":"RGB Selector","path":"/data/RGBSelector.py","type":"py","desc":"A RGB Selector and HEX, Have some requirements, read in line 8."}
     ],
     "logs":[
         {"date":"02/06/23 08:41","text":"Content updated, bug fixes and some improvements."},
