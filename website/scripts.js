@@ -1,12 +1,13 @@
 var dataJSON = {
     "free":[
-        {"style.css":"/data/style.css"},
-        {"memes-pt-br.json":"/data/memes-pt-br.json"},
-        {"scripts.js":"/data/scripts.js"},
-        {"Ez Cheat.js":"/data/ezCheat.js"},
-        {"PyGame PooP Engine 2":"/data/PooPEngine2.py"}
+        {"name":"style.css","path":"/data/style.css","type":"css","desc":"A stylesheet for sites"},
+        {"name":"memes-pt-br.json","path":"/data/memes-pt-br.json","type":"json","desc":"A Json for store image links"},
+        {"name":"scripts.js","path":"/data/scripts.js","type":"js","desc":"A script for sites"},
+        {"name":"Ez Cheat.js","path":"/data/ezCheat.js","type":"js","desc":"A cheat for a specific site"},
+        {"name":"PyGame PooP Engine 2","path":"/data/PooPEngine2.py","type":"py","desc":"A engine with PyGame"}
     ],
     "logs":[
+        {"date":"02/06/23 08:41","text":"Content updated, bug fixes and some improvements."},
         {"date":'01/06/23 09:17','text':"memes page and new memes."},
         {"date":"30/06/23 14:27","text":"some improvments to CSS and site title."},
         {"date":"29/06/23 15:00","text":"Some improvements in JavaScript and CSS and new function to Show Content button."},
@@ -30,21 +31,20 @@ function GetMemes(){
 function GetClickedSpan(me){
     // Get JSON File
     var free = dataJSON["free"][me];
-    for (key in free){
-        var v = free[key];
-        var k = key;
-    }
+    
     // Get Frame of item
     var iteminfo = document.getElementById("item-info");;
     
     var title = document.getElementById("item-title");
     var link = document.getElementById("item-link");
     var id = document.getElementById('item-id');
+    var desc = document.getElementById('item-desc');
 
     // Set Div values
-    title.textContent = "Title: " + k;
-    link.href= v;
-    id.textContent = "ID: "+me
+    title.textContent = "Title: " +free["name"];
+    link.href= free["path"];
+    desc.textContent = "Description: " + free["desc"];
+    id.textContent = "ID: "+me + " Type: " + free["type"];
 
     // Show or hide
     if (iteminfo.hidden || me){
@@ -69,18 +69,16 @@ function getFiles(){
     /*/
     for (var i =0;i< l.length; i++){
         var obj = l[i];
-        for (var key in obj){
-            var v = obj[key];
-            var x = document.createElement("li");
-            var a = document.createElement("button");
-            a.style.background = "none";
-            a.className = "c-green";
-            a.innerText = key;
-            a.Value = i;
-            a.id = "item-"+i;
-            x.appendChild(a);
-            e.appendChild(x);
-        }
+        var x = document.createElement("li");
+        var a = document.createElement("button");
+        a.style.background = "none";
+        a.className = "c-green";
+        a.innerText = obj["name"];
+        a.Value = i;
+        a.id = "item-"+i;
+        x.appendChild(a);
+        e.appendChild(x);
+
     }
     
     var childs = e.childNodes;
@@ -160,3 +158,14 @@ function OverlayOpen(id){
     };
     
 }
+
+
+window.addEventListener('click',(event)=>{
+    var over = document.getElementsByClassName('overlay');
+    for (i = 0; i <over.length; i++){
+        var x = over[i];
+        if (event.target === x){
+            x.style.display = 'none';
+        };
+    }
+})

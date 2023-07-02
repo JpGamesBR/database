@@ -66,7 +66,7 @@
                 <h4>Yes, you can.<br>All content from this site is free to use, don't need any copyright or credits.<br>This is a database developed for better implement in projects.<br>You can see a list of all items this site store here:</h4>
                 <button id="scbtn" onclick="OverlayOpen('cnt')">Show Content</button>
             </div>
-            <div id="cnt" class="overlay" style="display: none;" onclick="this.style.display = 'none'">
+            <div id="cnt" class="overlay" style="display: none;">
                 <div class="menu">
                     <div class="menu-head">
                         <div class="mcontent">
@@ -86,6 +86,7 @@
                                     Info:
                                     <small id="item-id">Id: </small><br>
                                     <span id="item-title">Title: </span><br>
+                                    <small id="item-desc">Description: <br></small><br>
                                     <span>Link: <a id="item-link"><button>Go</button></a></span><br>
                                 </div>
                             </li>
@@ -98,7 +99,7 @@
                 <h1>Here a meme generator using a json from this database</h1>
                 <button onclick="OverlayOpen('meme')">Meme</button>
             </div>
-            <div id="meme" class="overlay" style="display: none;" onclick="this.style.display='none'">
+            <div id="meme" class="overlay" style="display: none;">
                 <div class="menu">
                     <div class="menu-head">
                         <div class="mcontent">
@@ -107,7 +108,7 @@
                         </div>
                     </div>
                     <p>A random meme in PT-BR!</p>
-                    <small>if you want to get a meme list, <button onclick="hideandopen()">click here</button>!</small>
+                    <small>if you want to get a meme list, <button onclick="hideandopen()">click here</button>!</small><br>
                     <button onclick="GetMemes()">Generate a new meme</button>
                     <script>
                         function hideandopen(){
