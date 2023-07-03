@@ -1,19 +1,5 @@
 {
   "apps":[
-    {
-      "version":0.5,
-      "name": "JDownloader",
-      "download":"https://bit.ly/3asO7B5"
-    },
-    {
-      "version":0.1,
-      "name":"DBJL",
-      "download":""
-    },
-    {
-      "version":3.0,
-      "name":"JTxtReader",
-      "download":"https://bit.ly/3nRgvQb"
-    }
+    {"name":"PooPEngine 2","version":"0.0.3"}
   ]
 }
