@@ -8,6 +8,7 @@ var dataJSON = {
         {"name":"colors.json","path":"/data/colors.json","type":"json","desc":"A json contains colors in RGB"}
     ],
     "logs":[
+        {"date":"07/07/23 18:36","text":"Colors json, PyMaxEngine and deleted PooPEngine 2"},
         {"date":"02/06/23 08:41","text":"Content updated, bug fixes and some improvements."},
         {"date":'01/06/23 09:17','text':"memes page and new memes."},
         {"date":"30/06/23 14:27","text":"some improvments to CSS and site title."},
