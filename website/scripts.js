@@ -5,9 +5,11 @@ var dataJSON = {
         {"name":"scripts.js","path":"/data/scripts.js","type":"js","desc":"A script for sites"},
         {"name":"Ez Cheat.js","path":"/data/ezCheat.js","type":"js","desc":"A cheat for a specific site"},
         {"name":"PyMaxEngine","path":"/data/PyMaxEngine.py","type":"py","desc":"A engine with PyGame"},
-        {"name":"colors.json","path":"/data/colors.json","type":"json","desc":"A json contains colors in RGB"}
+        {"name":"colors.json","path":"/data/colors.json","type":"json","desc":"A json contains colors in RGB"},
+        {"name":"pyEncrypt.py","path":"/data/pyEncrypt.py","type":"py","desc":"A engine for encrypt texts, numbers and others."}
     ],
     "logs":[
+        {"date":"09/07/23 16:07","text":"Bugs fixeds, added pyEncrypt.py"},
         {"date":"07/07/23 18:36","text":"Colors json, PyMaxEngine and deleted PooPEngine 2"},
         {"date":"02/06/23 08:41","text":"Content updated, bug fixes and some improvements."},
         {"date":'01/06/23 09:17','text':"memes page and new memes."},
@@ -170,4 +172,8 @@ window.addEventListener('click',(event)=>{
             x.style.display = 'none';
         };
     }
+})
+
+document.addEventListener('load',function(){
+    console.log('Wait, if you paste any thing here\nthis can damage the client-side site\nand open secure failures to client!\nOnly use this when you know what you are making.')
 })
