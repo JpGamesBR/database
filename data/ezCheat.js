@@ -1,6 +1,7 @@
 /*
-UPDATE: 26/06/23
-Arrumado Script do vídeo, Removído aviso de texto copiado, Aumentado limite de 25 para 40.
+UPDATE: 24/07/23
+Arrumado Script do vídeo;
+Bugs arrumados.
 ::::: Atualmente: FUNCIONANDO. :::::
 
 COMO INSTALAR O CHEAT?
@@ -133,7 +134,7 @@ function checkCheat(){
 }
 
 /* Video Script */
-const VideoScript ="document.getElemenstByTagName('video')[0].playbackRate = 10;";
+const VideoScript ="document.getElementsByTagName('video')[0].playbackRate = 10;";
 
 function setupCheat(){
     if (checkCheat()){
@@ -173,7 +174,7 @@ function setupCheat(){
                     inp.value =1;
                 };
             };
-            showFrm.textContent = inp.value + "/25";
+            showFrm.textContent = inp.value + "/40";
 
         });
 
@@ -274,8 +275,8 @@ function copyToClipboard(){
 function clickcheat_btn(){
         const inp = document.getElementById("quantity_frame");
         nextTime = nextMoment2;
-        if (inp.value > 26){
-            inp.value = 25;
+        if (inp.value > 41){
+            inp.value = 40;
         };
         for (i = 0; i < inp.value; i++){
             nextTime();
