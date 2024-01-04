@@ -14,9 +14,14 @@ li {
   padding: 0;
 }
 
+:root {
+  --background-color: #f0f0f0;
+  --background-nav-color: #5865f2;
+}
+
 /* Set the background and text colors */
 body {
-  background-color: #f0f0f0;
+  background-color: var(--background-color);
   color: #333;
   font-family: Arial, sans-serif;
 }
@@ -42,7 +47,7 @@ body {
 
 /* Navigation styles */
 .nav {
-  background-color: #5865f2;
+  background-color: var(--background-nav-color);
   padding: 10px;
 }
 
