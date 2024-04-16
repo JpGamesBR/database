@@ -1,15 +1,20 @@
 /*
-UPDATE: 24/07/23
-Arrumado Script do vídeo;
-Bugs arrumados.
+UPDATE: 15/04/24
+Show Bar adicionada;
+Texto de dica alterado;
+otimização geral.
 ::::: Atualmente: FUNCIONANDO. :::::
 
 COMO INSTALAR O CHEAT?
 1- Abra o site;
 2- Abra o curso;
-3- Cole este código;
-4- Pressione enter;
+3- Cole este código(Dentro da 2ªAba do consoloe ex: top -> 40000);
+4- Pressione enter do Numpad;
 5- Bom uso.
+
+Controles:
+Numpad Minus -> Esconder/mostrar GUI;
+Numpad Enter -> Skip Frames;
 
 AVISOS:
 o máximo de frames que pode-se pular por clique é 40;
@@ -25,16 +30,14 @@ COMO USAR A SCRIPT DE VIDEO:
 2- Selecione a seta do Insepcionar e clique no player;
 3- Abra no console;
 4- Cole o script;
-5- Veja o vídeo inda 10x;
+5- Veja o vídeo indo a 10x;
 */
-
-
-
 
 
 var contadorBug = 0;
 var cheatActive = false;
 var cheatOppen = false;
+var showBarOn = true;
 
 function nextMoment2(event) {
     if ($(".present .fragment.current-fragment").next(".fragment").length == 0 && $("section.present").next("section").length == 0) {
@@ -117,6 +120,9 @@ function checkCheat(){
     if (window.location.hostname =="app.easyupeducacao.com.br"){
         if (document.getElementById("cheat_Background")){
             document.getElementById("cheat_Background").remove();
+            if (document.getElementById("c-showbar")){
+                document.getElementById("c-showbar").remove();
+            }
             alert("Cheat já estava ativo, deletado e reativando.");
             console.log("Deletado.");
             return true;
@@ -192,17 +198,34 @@ function setupCheat(){
         /* Warn in text */
         const text2 = document.createElement("span");
         text2.style.color = "red";
-        text2.textContent = "Recomendação: use no maximo 25 frames.";
+        text2.textContent = "Recomendação: use no maximo 10 frames.";
         text2.style.fontSize = "10px";
         text.appendChild(text2);
         
         /* text */
         const text3 = document.createElement("span");
         text3.style.color = "white";
-        text3.textContent = "Para saber como usar, acesse o pastebin do script."
+        text3.textContent = "Para saber como usar, acesse o github do script."
         text3.style.fontSize = "10px";
         text3.style.display = "inline-block";        
         
+        /* Showbar Check box */
+        const chkbox = document.createElement("input");
+        chkbox.style.display = "inline-block";
+        chkbox.type = "checkbox";
+        chkbox.id = "showBarOn";
+        chkbox.value = `${showBarOn}`;
+        chkbox.addEventListener('change',function(){
+            if (this.checked){
+                showBarOn = true;
+                showbar.style.visibility = "visible";
+            }
+            else{
+                showBarOn = false;
+                showbar.style.visibility = "hidden";
+            }
+        });
+
         /* Copy Video Script */
         const video_copy = document.createElement("button");
         video_copy.style.display = "inline-block";
@@ -219,10 +242,41 @@ function setupCheat(){
         inp2.style.fontSize = "10px";
         inp2.disabled = true;
         inp2.type = "url";
-        
+
+        /* ShowBar */
+        const showbar = document.createElement('div');
+        showbar.style.width = "10em";
+        showbar.style.height = "3em";
+        showbar.style.zIndex = "99999";
+        showbar.style.position = "fixed";
+        showbar.style.display = "inline";
+        showbar.style.top = "0";
+        showbar.style.left = "0";
+        showbar.style.margin = "5px";
+        showbar.style.backgroundColor = "#007bff";
+        showbar.style.padding = "5px";
+        showbar.setAttribute('id',"c-showbar");
+
+        const showBtn = document.createElement('button');
+        showBtn.style.display = 'inline-block';
+        showBtn.textContent = "Show";
+        showBtn.style.fontSize = "10px";
+        showBtn.style.position = "relative";
+
+        const activeBtn = document.createElement('button');
+        activeBtn.style.display = 'inline-block';
+        activeBtn.textContent = "Skip";
+        activeBtn.style.fontSize = "10px";
+        activeBtn.style.position = "relative";
+        btn.setAttribute('id',"cheat_btn2");
+
+
+        showbar.appendChild(showBtn);
+        showbar.appendChild(activeBtn);
+            
         /* Hide Button */
         const hdBtn = document.createElement('button');
-        hdBtn.style.displa = "inline-block";
+        hdBtn.style.display = "inline-block";
         hdBtn.textContent = "Hide";
         hdBtn.style.fontSize = "10px";
         
@@ -240,17 +294,24 @@ function setupCheat(){
         divFor.appendChild(inp2);
         divFor.appendChild(document.createElement('br'));
         divFor.appendChild(hdBtn);
+        divFor.appendChild(document.createElement('br'));
+        divFor.appendChild(chkbox);
+        divFor.append('Show Bar?');
+
 
         /* Append Back to Body */
         document.body.appendChild(divFor);
+        document.body.append(showbar);
 
         /* Warn end of gui build*/
         console.log("Gui Build");
 
         btn.setAttribute('id','cheat_btn');
         btn.setAttribute('onclick',"clickcheat_btn()");
+        activeBtn.setAttribute('onclick',"clickcheat_btn()");
         video_copy.setAttribute('onclick',"copyToClipboard()");
         hdBtn.setAttribute('onclick',"hideMenu()");
+        showBtn.setAttribute('onclick',"showMenu()");
         
         cheatActive = true;
         cheatOppen = true;
@@ -260,11 +321,27 @@ function setupCheat(){
 }
 
 function hideMenu(){
-	const bg = document.getElementById("cheat_Background");
+    const bg = document.getElementById("cheat_Background");
+    const showbar = document.getElementById("c-showbar");
     cheatOppen = false;
     bg.style.visibility= "hidden";
     console.clear();
     console.log("Hide");
+    if (showBarOn){
+	showbar.style.visibility = "visible";
+    };	
+}
+
+function showMenu(){
+    const bg = document.getElementById("cheat_Background");
+    const showbar = document.getElementById("c-showbar");
+    cheatOppen = false;
+    bg.style.visibility= "visible";
+    console.clear();
+    console.log("Show");
+    if (showBarOn){
+	showbar.style.visibility = "hidden";
+    };	
 }
 
 function copyToClipboard(){
@@ -288,18 +365,25 @@ function clickcheat_btn(){
 document.onkeypress = function (e) {
     e = e || window.event;
     const bg = document.getElementById("cheat_Background");
+    const showbar = document.getElementById("c-showbar");
     if (cheatActive && e.code == "NumpadSubtract"){
         if (cheatOppen){
             bg.style.visibility = "hidden";
             cheatOppen = false;
             console.clear();
             console.log('Hide');
+	    if (showBarOn){
+		showbar.style.visibility = "visible";
+	    };
         }
         else{
             bg.style.visibility = "visible";
             cheatOppen = true;
             console.clear();
             console.log("Show");
+	    if (showBarOn){
+		showbar.style.visibility = "visible";
+	    };
         };
     }
     else{
