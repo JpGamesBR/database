@@ -1,20 +1,6 @@
-# Database - MrJuaumBR
+# MrJuaumBR
+## What happened to the old site?
+- The Old site was moved, will be released soon.
 
-**A Hosting site**
-
-*Multiples updates*
-
-*Multiples functionalities*
-
-*Very helpful in some cases*
-
-*funny :)*
-
-- Please see this by clicking [here](https://mrjuaumbr.github.io/).
-- Or see the **Data** Folder [here](https://github.com/MrJuaumBR/MrJuaumBR.github.io/tree/main/data).
-
-🛠️Found a bug in any filé?🛠️
-
-- Ser our Discord server in site
-
-- Usa Issue tab in GitHub
+## What is this site now?
+- This site is a version for a portfolio of @MrJuaumBR
