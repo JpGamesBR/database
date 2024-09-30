@@ -328,6 +328,7 @@ main.carousel-load div.item{
     width: auto;
     height: auto;
     background-color: coral;
+    opacity: 0.8;
     --distance: -200px;
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
@@ -337,10 +338,10 @@ main.carousel-load div.item{
     z-index: calc((var(--position) - var(--abs)));
 }
 main.carousel-load div.item:hover{
-    opacity: 0.7;
+    opacity: 0.95;
 }
 main.carousel-load div.item:active{
-    opacity: 0.5;
+    opacity: 1;
 }
 
 main.carousel-load div.item:nth-of-type(1) {
