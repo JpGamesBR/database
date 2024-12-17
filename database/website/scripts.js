@@ -6,7 +6,8 @@ var dataJSON = {
         {"name":"Ez Cheat.js","path":"/data/ezCheat.js","type":"js","desc":"A cheat for a specific site"},
         {"name":"PyMaxEngine","path":"/data/PyMaxEngine.py","type":"py","desc":"A engine with PyGame"},
         {"name":"colors.json","path":"/data/colors.json","type":"json","desc":"A json contains colors in RGB"},
-        {"name":"pyEncrypt.py","path":"/data/pyEncrypt.py","type":"py","desc":"A engine for encrypt texts, numbers and others."}
+        {"name":"pyEncrypt.py","path":"/data/pyEncrypt.py","type":"py","desc":"A engine for encrypt texts, numbers and others."},
+        {"name":"abyssal eclipse news","path":"/data/news-abyssaleclipse.json","The news json that gonna be used by abyssal eclipse"}
     ],
     "logs":[
         {"date":"30/09/24 14:34","text":"Updated thw Database and Mainpage."},
