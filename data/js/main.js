@@ -19,6 +19,7 @@ var dataJSON = {
         {"name":"pyEncrypt.py","path":"./data/pyEncrypt.py","type":"py","desc":"A engine for encrypt texts, numbers and others."}
     ],
     "logs":[
+        {"date":"19/02/25 18:30","text":"Updated my mainpage."},
         {"date":"31/08/24 14:34","text":"Updated and moved PyMaxEngine."},
         {"date":"09/07/23 16:07","text":"Bugs fixeds, added pyEncrypt.py"},
         {"date":"07/07/23 18:36","text":"Colors json, PyMaxEngine and deleted PooPEngine 2"},
